@@ -1,0 +1,232 @@
+<html>
+    
+
+    <head>
+        <meta>
+        <link rel="stylesheet" href="resources/bootstrap5.2/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="resources/stylesGuia.css" >
+        <script src="https://kit.fontawesome.com/4225004423.js" crossorigin="anonymous"></script>
+
+<style>
+    .pointMarron{
+        color: maroon;
+        size: 1px;
+    }
+
+    .tableContent{
+        margin-left: 10px;
+    }
+    .marginContent{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
+</style>
+
+    </head>
+    <title>Creación de guia</title>
+    <body>
+        <div class="container" style="margin-top: 50px;">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2>Programa para la reunion de entre semana</h2>
+            </div>
+            
+            
+            <section id="section-create">
+                <h4>Información general para la reunión</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Fecha</label>
+                        <input class="form-control" type="date" id="date" >
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Texto base</label>
+                        <input class="form-control" id="baseText" name="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Presidente</label>
+                        <select id="president" class="form-control">
+                            <option>Name</option>
+                            <option>Name</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Oración de inicio</label>
+                        <select id="startPrayer" class="form-control">
+                            <option>Name</option>
+                            <option>Name</option>
+                        </select>
+                    </div>                                                
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-lg-3">
+                        <label>Oración final</label>
+                        <select id="endPrayer" class="form-control">
+                            <option>Name</option>
+                            <option>Name</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Canción inicial</label>
+                        <input class="form-control" id="" name="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Canción vida cristiana</label>
+                        <input class="form-control" id="" name="">
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Canción final</label>
+                        <input class="form-control" id="" name="">
+                    </div>                                                
+                </div> 
+                
+                <h4 style="margin-top: 40px;">Partes y secciones</h4>
+                <hr>
+                <div class="alert alert-primary">
+                    Sección actual: <span>Name section</span> 
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Sección</label>
+                        <input class="form-control" >
+                    </div>
+                    <div class="col-lg-3">
+                        <label>Duración (en minutos)</label>
+                        <input class="form-control" id="" name="">
+                    </div>
+                    <div class="col-lg-6">
+                        <label>Responsable(s)</label>
+                        <input class="form-control" id="" name="">
+                    </div>
+                                  
+                </div>
+                <div class="text-end" style="margin-top: 30px;">
+                    <button class="btn btn-success" style="margin-right: 20px;">Agregar sección</button>
+                    <button class="btn btn-warning">Finalizar sección</button>                    
+                </div>  
+            </section>
+            
+            <hr style="margin-top: 40px; margin-bottom: 30px;">
+            <section id="printSectionGuia">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <th ></th>
+                            <th ></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <h4>Congregation name</h4></td>
+                            <td class="text-end" style="text-align: end;"><h3>Programa para la reunión de entre semana</h3> </td>
+                        </tr>
+                        <tr>
+                            <td><h4><span id="dateProgram">date</span> | <span id="textBase">textBase</span></h4></td>
+                            <td style="text-align: end;"><span class="hourAndTitle">Presidente: </span> <span id="president">PresidentName</span> </td>
+                        </tr>
+                    </tbody>
+                </table>                 
+                
+                <div class="text-center" width="100%">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <th ></th>
+                                <th ></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="marginContent"> <span class="hourAndTitle" id="hourStart">00:00</span> * Canción <label id="firstSong">000</label></td>
+                                <td class="marginContent text-end"><span class="hourAndTitle">Oración:</span> <span id="firstPrayName">NamePrayer</span> </td>
+                            </tr>
+                            <tr>
+                                <td class="marginContent"><span class="hourAndTitle" id="hourStart">00:00</span>  * Palabras de introducción. (1min)</td>
+                                <td class="marginContent text-end"></td>
+                            </tr>                                                    
+                        </tbody>
+                    </table> 
+                    <table width="100%" style="margin-top: 20px;">
+                        <tbody>
+                            <tr style="padding-top: 40px; margin-top: 40px;" >
+                                <td style="background-color: gray; margin-top: 15px; margin-bottom: 15px;" colspan="2" ><p style="color: white; padding-top: 15px; padding-left: 10px;">TESOROS DE LA BIBLIA</p></td>
+                            </tr>  
+                        </tbody>
+                    </table>
+                    <table id="contentBibleTreasures" class="tableContent" width="100%" style="margin-top: 20px;">
+                        <tbody>
+                            <tr style="margin-top: 15px; padding-top: 15px;">
+                                <td width="70px;" ><span class="hourAndTitle" id="hourStart">00:00</span></td>
+                                <td class="text-left">   * <label id=""> Content (0 mins.) </label> </td>
+                                <td class="text-end" style="padding-right: 20px;">Responsable</td>
+                            </tr>  
+                                                         
+                        </tbody>
+                    </table>                     
+                    <table width="100%" style="margin-top: 20px;">
+                        <tbody>
+                            <tr style="padding-top: 40px; margin-top: 40px;" >
+                                <td style="background-color: goldenrod; margin-top: 15px; margin-bottom: 15px;" colspan="2" ><p style="color: white; padding-top: 15px; padding-left: 10px;">SEAMOS MEJORES MAESTROS</p></td>
+                            </tr>  
+                        </tbody>
+                    </table> 
+                    <table id="contentBetterTeacher" class="tableContent" width="100%" style="margin-top: 20px;">
+                        <tbody>
+                            <tr style="margin-top: 15px; padding-top: 15px;">
+                                <td width="70px;" ><span class="hourAndTitle" id="hourStart">00:00</span></td>
+                                <td class="text-left">   * <label id=""> Content (0 mins.)  </label> </td>
+                                <td class="text-end" style="padding-right: 20px;">Responsable</td>
+                            </tr>  
+                                                         
+                        </tbody>
+                    </table>                     
+                    <table width="100%" style="margin-top: 20px;">
+                        <tbody>
+                            <tr style="padding-top: 40px; margin-top: 40px;" >
+                                <td style="background-color:maroon ; margin-top: 15px; margin-bottom: 15px;" colspan="2" ><p style="color: white; padding-top: 15px; padding-left: 10px;">NUESTRA VIDA CRISTIANA</p></td>
+                            </tr>                                                           
+                        </tbody>
+                    </table>  
+                    <table class="tableContent" width="100%" style="margin-top: 5px;">
+                        <tbody>
+                            <tr>
+                                <td class="marginContent" width="70px;" ><span class="hourAndTitle" id="hourStart">00:00</span></td>
+                                <td class="marginContent">  * Canción <label id="middleSong"></label> </td>
+                                <td class="marginContent text-end"></td>
+                            </tr>                                                                                       
+                        </tbody>
+                    </table> 
+                    <table id="contentChristianLife" class="tableContent" width="100%" style="margin-top: 5px;">
+                        <tbody>
+                            <tr>
+                                <td class="marginContent" width="70px;" ><span class="hourAndTitle" id="hourStart">00:00</span></td>
+                                <td class="marginContent text-left">   * <label id=""> Content (0 mins.)  </label> </td>
+                                <td class="marginContent text-end" style="padding-right: 20px;">Responsable</td>
+                            </tr>                                                                                       
+                        </tbody>
+                    </table> 
+                    <table class="tableContent" width="100%" style="margin-top: 5px;">
+                        <tbody>
+                            <tr>
+                                <td class="marginContent" width="70px;" ><span class="hourAndTitle" id="hourStart">00:00</span></td>
+                                <td class="marginContent"> * Canción <label id="lastSong"></label> </td>
+                                <td class="marginContent text-end"></td>
+                            </tr>  
+                            <tr>
+                                <td class="marginContent" width="70px;" ></td>
+                                <td class="marginContent"></td>
+                                <td class="marginContent text-end" style="padding-right: 20px;"><span class="hourAndTitle">Oración:</span> <span id="lastPrayName">NamePrayer</span> </td>
+                            </tr>                                                                                      
+                        </tbody>
+                    </table>                                                                                                    
+                </div>
+               
+            </section>
+        </div>
+        <footer class="text-center" style="margin-bottom: 20px; margin-top: 100px; ">
+            ⌨️ Desarrollado por <a href="mailto:aemedranom@gmail.com" style="text-decoration: none;">Alan Medrano.</a>
+        </footer>
+    </body>
+</html>
